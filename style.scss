@@ -54,8 +54,10 @@ ul li{
 
 }
 .site-name{
-  font-size:2em;
-  font-weight:500;
+  font:{
+    size:2em;
+    weight:500;
+  }
   padding:10px;
 }
 .site-description{
@@ -86,8 +88,13 @@ h1{
   font-weight:500;
   color:$gray;
 }
+h2{
+  font-size:1.5em;
+  padding:10px 0px;
+  color:$gray;
+}
 h3{
-  font-size:1.4em;
+  font-size:1.3em;
   padding:10px 0px;
   color:$gray;
 }
