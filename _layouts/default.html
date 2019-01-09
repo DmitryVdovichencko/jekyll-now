@@ -1,64 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
-    {% include meta.html %}
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-
+    <title>
+      {% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+      {% include meta.html %}
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+      <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+      <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet"> 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
-
   <body>
     <div class="content-wrapper">
         <header class="masthead">
-        
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+            <section class="site-info">
+              <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+              <p class="site-description">{{ site.description }}</p>
+            </section>
+          
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-        
-
-          <nav>
-            <a class="menu-link" href="{{ site.baseurl }}/">Блог</a>
-            <a class="menu-link" href="{{ site.baseurl }}/projects">Проекты</a>
-            <a class="menu-link" href="{{ site.baseurl }}/about">Обо мне</a>
-          </nav>
+            <nav>
+              <a class="menu-link" href="{{ site.baseurl }}/">Статьи</a>
+              <a class="menu-link" href="{{ site.baseurl }}/projects">Проекты</a>
+              <a class="menu-link" href="{{ site.baseurl }}/about">Контакты</a>
+            </nav>
         </header>
-      
-    
-
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    
+      <div id="main" role="main" class="container">
+        {{ content }}
+      </div>
     </div>  
     <footer class="footer">
       <div class="footer__container">
-       <div class="copyrigths"> 
-        <p>Сайт разработан с помощью <a href="https://jekyllrb.com/"><img class ="copyrights__icons" src="{{ site.baseurl }}/images/icons/jekyll.png" alt=""></a> размещен на <a href="https://pages.github.com/"><img class ="copyrights__icons" src="{{ site.baseurl }}/images/icons/GitHub_Logo_White.png" alt=""> Pages</a> </p>
-        <p>© 2018</p>
-
-       </div>
-          <div class="social-icons">{% include footer-icons.html %}</div>
-
-
-
+        <div class="copyrigths"> 
+          <p>Сайт разработан с помощью 
+            <a href="https://jekyllrb.com/"><img class ="copyrights__icons" src="{{ site.baseurl }}/images/icons/jekyll.png" alt=""></a> размещен на 
+            <a href="https://pages.github.com/"><img class ="copyrights__icons" src="{{ site.baseurl }}/images/icons/GitHub_Logo_White.png" alt=""> Pages</a> 
+          </p>
+          <section class="social-icons">{% include footer-icons.html %}</section>
+          <p>© 2018</p>
+        </div>
+        
       </div>
     </footer>
-
-    
-
     {% include analytics.html %}
   </body>
 </html>

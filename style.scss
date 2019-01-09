@@ -4,12 +4,14 @@
 //
 // IMPORTS
 //
-@import "highlights";
-
-
 @import "reset";
 @import "variables";
 @import "svg-icons";
+@import "highlights";
+@import "header";
+@import "post";
+
+
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -17,14 +19,12 @@
 /**************/
 
 body{
-  height:100vh;
-  font-family:$roboto;
+  min-height:100vh;
+  font-family:$open-sans;
   display:flex;
   flex-flow:column nowrap;
   justify-content:space-between;
   
-
- 
 }
 .content-wrapper{
   padding:0% 20%;
@@ -47,45 +47,16 @@ ul{
 ul li{
   padding:5px;
 }
-.masthead{
-  display:flex;
-  padding:20px 0px;
-  flex-flow:row wrap;
 
-}
-.site-name{
-  font:{
-    size:2em;
-    weight:500;
-  }
-  padding:10px;
-}
-.site-description{
-  padding:10px;
-  color:$gray;
-}
-nav{
-  // border:$gray 1px solid;
-  padding:20px 10px;
-}
-.menu-link{
-  margin-right:10px;
-  letter-spacing:1.2px;
-
-}
-.site-avatar img{
-  width:100px;
-  height:auto;
-  border-radius:50px;
-}
 //Content styles
 .container{
   width:90%;
 }
 h1{
   font-size:1.7em;
+  line-height: 1.5em;
   padding:10px 0px;
-  font-weight:500;
+  font-weight:300;
   color:$gray;
 }
 h2{

@@ -1,0 +1,44 @@
+.masthead{
+  display:flex;
+  padding:20px 0px;
+  flex-flow:row wrap;
+
+}
+.site-name{
+  font:{
+    size:2em;
+    weight:500;
+  }
+  padding:10px;
+}
+.site-description{
+  padding:10px;
+  color:$gray;
+}
+nav{
+    font:{
+    size:1.5em;
+    weight:300;
+  }
+  padding:20px 10px;
+}
+.menu-link{
+  margin-right:10px;
+  letter-spacing:1.2px;
+
+}
+.site-avatar img{
+  width:100px;
+  height:auto;
+  border-radius:50px;
+}
+
+  @media (max-width: 600px){
+
+  .site-name, .site-description{
+    padding:10px 0px;
+  }
+   nav{
+    padding-left:0px;
+  } 
+}
